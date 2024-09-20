@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    background: url(/src/assets/img/halloween-scene-illustration-anime-style_23-2151794320.avif) no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Poppins", system-ui;
+    font-weight: 300;
+    font-style: normal;
+        
+}
+
+
+.logo{
+    width: 15em; 
+    margin: 20px;
+    filter: contrast(100);
+}
+
+h1, h5{
+   font-size: 1em;
+   margin: auto; 
+}
+
+h1{
+    font-size: 2em;
+}
+
+a{
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    transition: 0.8s;
+    opacity: 0.7;
+}
+    
+.container{
+    display: grid;
+    place-items: center;   
+    height: 100vh;  
+    
+}
+.container, form{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user{
+    margin: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+form{
+    padding: 2em;
+    margin: auto;
+    border-radius: 12px;
+    width: 40vw;
+    height: auto;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+
+input{
+    margin: 1em;    
+    width: 25vw;
+    padding: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    opacity: 0.5;
+    border: solid  #41434500 3px ;
+    overflow: scroll;
+}
+
+input:hover{
+    opacity: 1;
+    border:solid 3px #004488;
+    transition: 0.5s;
+}
+
+
+
+input:focus{
+    opacity: 1;
+    outline: none;
+    border:solid 3px #30268fb6;
+}
+
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%);
+    margin: 10px;
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+    
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /*responsividade*/
+ 
+  @media(max-width:720px){
+    *{
+        overflow: hidden;
+    }
+    body{
+        background-position: 33.33%;
+        background-size: cover;
+        backdrop-filter: blur(10px); 
+        height: auto;
+        overflow-y: hidden;
+    }
+
+   h5{
+    margin: 10px;
+   }
+
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        
+
+    }
+
+    form{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: transparent; 
+    }
+
+    form{
+        width: auto;
+        height: auto;
+    }
+
+
+    form input{
+        width: 20em;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0);
+        }
+}
+
+
+
+  

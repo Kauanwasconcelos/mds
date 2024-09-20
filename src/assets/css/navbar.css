@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", system-ui;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    
+    background-color: #f7f7f7;
+    
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    color: #333;
+}
+
+/* navlist area */
+
+.header .nav a img{
+    width: 5em;
+    filter:invert(-100) ;
+}
+
+
+.nav-list a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+
+.nav-list a:hover, .header img:hover{
+    color:  #032063f9;
+    transition: ease-in 0.3s;
+}
+
+.header{
+    padding-inline: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: #0099ff solid 1px;
+    background-color: #e7f1f7f7; /* Definir a cor de fundo para evitar que o conteúdo passe por baixo */
+    z-index: 1000; /*
+    /* background: #4b6cb7;  fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #182848, #4b6cb7); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+  */
+
+}
+
+.header:hover{
+    box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.54);
+    -webkit-box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.54);
+    transition: ease-out 0.3s;
+}
+
+.nav{
+    height: 70px;
+    margin-inline:auto;
+    padding: 2px;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-list a{
+    font-size: 18px;
+    
+}
+
+.hamburguer{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #000000;
+   cursor: pointer;
+} 
+
+.hamburguer::before, 
+.hamburguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background:black;
+    margin-top: 5px;
+}
+
+@media(max-width:1000px){
+    .hamburguer{
+        display: block;
+         z-index: 1;
+    }
+
+    .hamburguer:hover{
+        opacity: 0.7;
+    }
+
+    .nav-list{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 30vh;
+        gap: 12px;
+        background-color: transparent;
+        clip-path: circle(100px at 90% -15%);
+        transition: 0.5s ease-out;
+
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items:center;
+        pointer-events: none;
+    }
+
+    .nav-list a{
+        font-size: 16px;
+        opacity: 0;
+    }
+
+   
+    .nav.active .nav-list{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+        background: #0099ff;
+        /* background: #4b6cb7;  
+        background: -webkit-linear-gradient(to right, #182848, #4b6cb7); 
+        background: linear-gradient(to right, #182848, #4b6cb7); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .nav.active .nav-list a{
+        opacity: 1;
+    }
+    
+}
+
+/* fim da navlist */
+
+
+

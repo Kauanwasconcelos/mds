@@ -1,0 +1,38 @@
+/*area do home*/
+
+
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    color: rgb(206, 193, 193);
+    padding: 101px 0px 22px;
+    background-color: #0099ff;
+   
+}
+.title h1{
+    text-transform: uppercase;
+}
+.description{
+    font-size: 1.1em;
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+    margin: 20px;
+    padding: 20px;
+    width: 40vw;
+}
+
+.banner{
+    height: 15vh;
+}

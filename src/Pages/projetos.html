@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeção de Projetos - CERBERUS</title>
+    <link rel="stylesheet" href="/src/assets/css/navbar.css">
+    <link rel="stylesheet" href="/src/assets/css/projects.css">
+</head>
+<body>
+    <!-- Cabeçalho do home -->
+    <header class="header" style="background: #0099ff;"> 
+        <nav class="nav">
+            <a href="#" class="logo"><img src="/src/assets/img/logoCerberuuu.png" alt=""></a>
+            <button class="hamburguer"></button> 
+            <ul class="nav-list">
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/src/">USUÁRIO</a></li>
+                <li><a href="/login.html">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <!-- Fim do cabeçalho do home -->
+
+    <main>
+        <section class="container">
+            <form id="project-form">
+                <h2>Criar Novo Projeto</h2>
+                <input type="text" id="project-name" placeholder="Nome do Projeto" required />
+                <input type="text" id="project-description" placeholder="Descrição do Projeto" required />
+                <input type="date" id="start-date" min="2024-01-01" required />
+                <select id="project-members" required>
+                    <option value="">Selecionar Membros</option>
+                    <!-- Os membros serão adicionados aqui dinamicamente -->
+                </select>
+                <input type="date" id="end-date" min="2024-01-01" max="2074-12-31" required />
+                <button type="submit">Salvar Projeto</button>
+                <button type="button" onclick="clearForm()">Cancelar</button>
+            </form>
+        </section>
+
+        <section class="container" id="project-cards">
+            <!-- Os cards de projeto serão adicionados aqui dinamicamente -->
+        </section>
+    </main>
+
+    <script src="/src/scripts/navbar.js"></script>
+    <script src="/src/scripts/projects.js"></script>
+</body>
+</html>
